@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Curricular Interactiva</title>
+
+  <!-- Fuente personalizada desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00695c;
+      margin-bottom: 40px;
+    }
+
+    .materia {
+      background-color: #ffffff;
+      border-left: 5px solid #26a69a;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .materia:hover {
+      background-color: #f1f8e9;
+    }
+
+    .contenido {
+      display: none;
+      padding-top: 10px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .materia {
+        font-size: 16px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Malla Curricular Interactiva</h1>
+
+  <div class="materia" onclick="toggle(this)">
+    Nombre de la asignatura
+    <div class="contenido">
+      Aquí puedes incluir una descripción del contenido, objetivos o prerrequisitos.
+    </div>
+  </div>
+
+  <div class="materia" onclick="toggle(this)">
+    Otra asignatura
+    <div class="contenido">
+      Descripción, temas clave, créditos académicos, etc.
+    </div>
+  </div>
+
+  <script>
+    function toggle(element) {
+      const contenido = element.querySelector('.contenido');
+      contenido.style.display = contenido.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
 
